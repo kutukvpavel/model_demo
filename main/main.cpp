@@ -27,7 +27,7 @@ void app_main()
     fcntl(fileno(stdin), F_SETFL, 0); //Set stdin read as blocking
 
     my_model::computation_fininshed_callback = computed_callback;
-    ESP_ERROR_CHECK(my_model::init(model_data));
+    ESP_ERROR_CHECK(my_model::init(model_data + sizeof(model_preamble_t::version)));
     ESP_LOGI(TAG, "Model initialized. Starting the test...");
 
     while (1) {
