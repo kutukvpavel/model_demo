@@ -215,7 +215,7 @@ namespace preprocessing {
                 max = buffer[i];
             }
         }
-        ESP_LOGI(TAG, "\tMin = %f; Max = %f\n", min, max);
+        ESP_LOGI(TAG, "\tMin = %f; Max = %f", min, max);
         for (size_t i = 0; i < 301; i++) {
             buffer[i] = buffer[i] / max;
         }
