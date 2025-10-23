@@ -33,7 +33,7 @@ void app_main()
         putchar('\n');
         ESP_LOGI(TAG, "Starting the test...");
 
-        memcpy(test_data_buffer, test_data, TEST_DATA_LEN);
+        memcpy(test_data_buffer, test_data, TEST_DATA_LEN * sizeof(test_data_buffer[0]));
         my_model::start_computation(test_data_buffer, TEST_DATA_LEN);
 
         vTaskDelay(pdMS_TO_TICKS(500));

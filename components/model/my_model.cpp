@@ -59,11 +59,11 @@ static void prvInvokeInterpreter()
         return; //Ignore missing buffer 
     }
     preprocessing::preprocess(preproc_buffer);
-    /*ESP_LOGI(TAG, "Invoking TFMicro on following buffer:");
+    ESP_LOGI(TAG, "Invoking TFMicro on following buffer:");
     for (size_t i = 0; i < buffer_len; i++)
     {
         printf("\t%i = %8.6f\n", i, preproc_buffer[i]);
-    }*/
+    }
     input->data.f = preproc_buffer + 1;
     interpreter->Invoke();
     float res = output->data.f[0];
