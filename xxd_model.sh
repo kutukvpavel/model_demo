@@ -10,7 +10,8 @@ if [ ! -n "$1" ]; then
 fi
 
 rm main/model_data.cpp
-echo '#include "data.h"\n' > main/model_data.cpp
+echo '' > main/model_data.cpp
+printf '#include "data.h"\n\nconst ' > main/model_data.cpp
 xxd -i $1 >> main/model_data.cpp
 vname=$(echo "$1" | tr '.' '_')
 echo "\nconst uint8_t* model_data = ${vname};" >> main/model_data.cpp
