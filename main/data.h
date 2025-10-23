@@ -1,6 +1,10 @@
 #pragma once
 
 #include <inttypes.h>
+#include <stddef.h>
+#include <stdlib.h>
+
+#define TEST_DATA_LEN 301
 
 /// @brief ML model preamble structure (contains metadata)
 struct __packed model_preamble_t
@@ -11,3 +15,4 @@ struct __packed model_preamble_t
 };
 
 extern const uint8_t* model_data;
+extern const float* test_data;

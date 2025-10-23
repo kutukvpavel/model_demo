@@ -1,7 +1,8 @@
 idf_component_register(
     SRCS 
-    "main.cpp"
     "model_data.cpp"
+    "test_data.cpp"
+    "main.cpp"
     
     INCLUDE_DIRS 
     "."
