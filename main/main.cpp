@@ -6,7 +6,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <cstring>
-#include <string.h>
 #include <sys/fcntl.h>
 
 #include "my_model.h"
