@@ -1,6 +1,8 @@
 #include "data.h"
 
-const float resistances[TEST_DATA_LEN] = {
+#include "macros.h"
+
+const float resistances[] = {
 	3776.44091796875f,
 	2740.53076171875f,
 	2743.150390625f,
@@ -305,3 +307,8 @@ const float resistances[TEST_DATA_LEN] = {
 };
 
 const float* test_data = resistances;
+
+void check()
+{
+	static_assert(ARRAY_SIZE(resistances) == TEST_DATA_LEN);
+}
