@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#expect model file name as $1
+#expect model file name as $1 (e.g. ./xxd_model.sh model_motya.vtflite)
 #put model file in the working directory of this script
 #this script must be ran from the root directory of the project (so that the model data file is at main/model_data.cpp)
 
